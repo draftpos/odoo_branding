@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_odoo_branding" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.odoo.branding</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="25"/>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app string="Odoo Branding" name="odoo_branding" logo="/odoo_branding/static/description/icon.png">
+                    <block title="Top Navigation Bar Branding" name="navbar_branding_settings">
+                        <setting id="navbar_logo_setting" title="Navbar Logo" help="Upload a custom logo to display on the top-left of the navigation bar. If empty, the main company logo will be used.">
+                            <field name="navbar_logo" widget="image" class="w-25"/>
+                        </setting>
+
+                        <setting id="navbar_logo_height_setting" title="Navbar Logo Height" help="Specify the display height for the navbar logo in pixels.">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label string="Logo Height (px)" for="navbar_logo_height" class="col-lg-4 o_light_label"/>
+                                    <field name="navbar_logo_height" class="col-lg-4"/>
+                                </div>
+                                <div class="row mt8">
+                                    <label string="Show Company Name" for="navbar_show_company_name" class="col-lg-4 o_light_label"/>
+                                    <field name="navbar_show_company_name"/>
+                                </div>
+                            </div>
+                        </setting>
+
+                        <setting id="navbar_colors_setting" title="Navbar Colors" help="Customize the background, text, active highlights, and hover colors for the top navigation bar.">
+                            <div class="content-group">
+                                <div class="row mt8">
+                                    <label string="Background Color" for="navbar_bg_color" class="col-lg-4 o_light_label"/>
+                                    <field name="navbar_bg_color" widget="color" class="col-lg-4"/>
+                                </div>
+                                <div class="row mt8">
+                                    <label string="Text &amp; Icon Color" for="navbar_text_color" class="col-lg-4 o_light_label"/>
+                                    <field name="navbar_text_color" widget="color" class="col-lg-4"/>
+                                </div>
+                                <div class="row mt8">
+                                    <label string="Active / Highlight Color" for="navbar_active_color" class="col-lg-4 o_light_label"/>
+                                    <field name="navbar_active_color" widget="color" class="col-lg-4"/>
+                                </div>
+                                <div class="row mt8">
+                                    <label string="Hover Color" for="navbar_hover_bg_color" class="col-lg-4 o_light_label"/>
+                                    <field name="navbar_hover_bg_color" widget="color" class="col-lg-4"/>
+                                </div>
+                            </div>
+                        </setting>
+
+                        <setting id="custom_brand_title_setting" title="Custom System Title" help="Custom name or brand title shown in browser title bar.">
+                            <field name="custom_brand_title" placeholder="e.g. MyCompany ERP"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+</odoo>

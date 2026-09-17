@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_company_form_odoo_branding" model="ir.ui.view">
+        <field name="name">res.company.form.odoo.branding</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Navbar Branding" name="navbar_branding">
+                    <group>
+                        <group string="Logo Settings">
+                            <field name="navbar_logo" widget="image" class="oe_avatar"/>
+                            <field name="navbar_logo_height"/>
+                            <field name="navbar_show_company_name"/>
+                            <field name="custom_brand_title"/>
+                        </group>
+                        <group string="Theme Colors">
+                            <field name="navbar_bg_color" widget="color"/>
+                            <field name="navbar_text_color" widget="color"/>
+                            <field name="navbar_active_color" widget="color"/>
+                            <field name="navbar_hover_bg_color" widget="color"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
