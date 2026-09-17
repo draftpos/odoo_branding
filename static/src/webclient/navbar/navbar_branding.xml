@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Community & Base NavBar Extension -->
+    <t t-name="odoo_branding.NavBar" t-inherit="web.NavBar" t-inherit-mode="extension">
+        <xpath expr="//nav[hasclass('o_main_navbar')]/*[1]" position="before">
+            <a t-if="brandingLogoUrl" 
+               href="/odoo" 
+               class="o_branding_logo_container d-flex align-items-center text-decoration-none px-2 me-1"
+               t-att-title="brandingCompanyName"
+               t-on-click.prevent="onBrandingLogoClick">
+                <img t-att-src="brandingLogoUrl" 
+                     class="o_branding_navbar_logo" 
+                     t-att-style="'max-height: ' + brandingLogoHeight + 'px;'"
+                     t-att-alt="brandingCompanyName"/>
+                <span t-if="brandingShowCompanyName" 
+                      class="o_branding_company_name ms-2 fw-semibold text-truncate d-none d-md-inline" 
+                      t-esc="brandingCompanyName"/>
+            </a>
+        </xpath>
+    </t>
+
+    <!-- Enterprise NavBar Extension -->
+    <t t-name="odoo_branding.EnterpriseNavBar" t-inherit="web_enterprise.EnterpriseNavBar" t-inherit-mode="extension">
+        <xpath expr="//nav[hasclass('o_main_navbar')]/*[1]" position="before">
+            <a t-if="brandingLogoUrl" 
+               href="/odoo" 
+               class="o_branding_logo_container d-flex align-items-center text-decoration-none px-2 me-1"
+               t-att-title="brandingCompanyName"
+               t-on-click.prevent="onBrandingLogoClick">
+                <img t-att-src="brandingLogoUrl" 
+                     class="o_branding_navbar_logo" 
+                     t-att-style="'max-height: ' + brandingLogoHeight + 'px;'"
+                     t-att-alt="brandingCompanyName"/>
+                <span t-if="brandingShowCompanyName" 
+                      class="o_branding_company_name ms-2 fw-semibold text-truncate d-none d-md-inline" 
+                      t-esc="brandingCompanyName"/>
+            </a>
+        </xpath>
+    </t>
+
+</templates>

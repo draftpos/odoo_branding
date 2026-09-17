@@ -1,0 +1,115 @@
+:root {
+    --odoo-branding-navbar-bg: #1e293b;
+    --odoo-branding-navbar-text: #f8fafc;
+    --odoo-branding-navbar-active: #38bdf8;
+    --odoo-branding-navbar-hover-bg: #334155;
+    --odoo-branding-logo-height: 32px;
+}
+
+/* =========================================================
+   Main Navbar Base Theming (Dark & Light Mode Compatible)
+   ========================================================= */
+header.o_navbar,
+header.o_navbar > nav.o_main_navbar {
+    background-color: var(--odoo-branding-navbar-bg) !important;
+    background: var(--odoo-branding-navbar-bg) !important;
+    color: var(--odoo-branding-navbar-text) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px -1px rgba(0, 0, 0, 0.08);
+
+    /* Force all direct container strips and wrappers to be transparent */
+    div,
+    nav,
+    .o_menu_sections,
+    .o_navbar_breadcrumbs,
+    .o_menu_systray,
+    .o_menu_toggle {
+        background-color: transparent !important;
+        background: transparent !important;
+    }
+
+    /* Top-level navbar buttons, entries, links, icons, and labels */
+    .o_menu_toggle,
+    .o_menu_brand,
+    .o_nav_entry,
+    .o_menu_sections .dropdown-toggle,
+    .o_menu_sections a,
+    .o_menu_sections button,
+    .o_menu_sections span,
+    .o_menu_systray button,
+    .o_menu_systray a,
+    .o_menu_systray i,
+    .o_menu_systray span,
+    .o_menu_systray .dropdown-toggle {
+        color: var(--odoo-branding-navbar-text) !important;
+        background-color: transparent !important;
+    }
+
+    /* Top-level navbar hover highlights */
+    .o_menu_toggle:hover,
+    .o_nav_entry:hover,
+    .o_menu_sections .dropdown-toggle:hover,
+    .o_menu_sections a:hover,
+    .o_menu_sections button:hover,
+    .o_menu_systray button:hover,
+    .o_menu_systray a:hover,
+    .o_menu_systray .dropdown-toggle:hover {
+        background-color: var(--odoo-branding-navbar-hover-bg) !important;
+        color: var(--odoo-branding-navbar-text) !important;
+        border-radius: 4px;
+    }
+
+    /* Active navigation highlights */
+    .active,
+    .o_menu_brand,
+    .o_menu_toggle.active,
+    .o_menu_sections .active > .dropdown-toggle,
+    .o_menu_sections .show > .dropdown-toggle {
+        color: var(--odoo-branding-navbar-active) !important;
+    }
+
+    /* Retain natural dropdown popup styling inside opened menus */
+    .dropdown-menu {
+        a, button, .dropdown-item, span {
+            color: var(--dropdown-link-color, inherit) !important;
+            background-color: transparent !important;
+
+            &:hover, &:focus {
+                background-color: rgba(56, 189, 248, 0.12) !important;
+                color: var(--odoo-branding-navbar-active, #38bdf8) !important;
+            }
+        }
+    }
+}
+
+/* =========================================================
+   Top-Left Brand Logo Container
+   ========================================================= */
+.o_branding_logo_container {
+    height: 100%;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    user-select: none;
+    background: transparent !important;
+    flex-shrink: 0;
+
+    &:hover {
+        opacity: 0.95;
+        background-color: var(--odoo-branding-navbar-hover-bg) !important;
+        border-radius: 4px;
+    }
+
+    .o_branding_navbar_logo {
+        max-height: var(--odoo-branding-logo-height, 32px);
+        width: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    .o_branding_company_name {
+        color: var(--odoo-branding-navbar-text) !important;
+        font-size: 0.95rem;
+        letter-spacing: -0.01em;
+        max-width: 200px;
+    }
+}
