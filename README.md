@@ -1,33 +1,47 @@
-# Odoo Branding & Navbar Customizer (`odoo_branding`)
+# Odoo White-Label Branding & Dynamic Theming (odoo_branding)
 
-A flexible, modern, and multi-company branding extension for Odoo that positions the company logo directly on the top-left navigation bar and provides complete real-time theming controls.
+[![Odoo Version](https://img.shields.io/badge/Odoo-17.0%20%7C%2018.0%20%7C%2019.0-714B67?logo=odoo&logoColor=white)](https://www.odoo.com)
+[![License: LGPL-3](https://img.shields.io/badge/License-LGPL--3-blue.svg)](LICENSE)
+[![Category](https://img.shields.io/badge/Category-Customization%2FUI-orange.svg)]()
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)]()
 
----
-
-## ✨ Features
-
-- **Top-Left Company Logo:** Places the company branding logo on the far left of the navbar before menu icons.
-- **Auto-Fallback:** Automatically uses the custom Navbar Logo if provided, or seamlessly falls back to the main Company Logo.
-- **UI Color Pickers:** Interactive color pickers in *Settings > General Settings > Odoo Branding* for:
-  - Navbar Background Color / Gradient
-  - Navbar Text & Icon Color
-  - Active & Highlight Color
-  - Hover Highlight Color
-- **Dark & Light Mode Compatibility:** Built with transparent overlays for crisp text and icon readability in both dark and light modes.
-- **Multi-Company Aware:** Custom branding configurations are saved per company.
-- **Zero Server Restarts:** Instant live theming via `ir.http` session info and dynamic CSS.
+> **Enterprise Multi-Tenant White-Labeling, Dynamic Navbar Branding, Corporate Logo Embedding & Clean ERP Presentation for Odoo.**
 
 ---
 
-## ⚙️ How to Configure
+## 📌 Overview
 
-1. Install the `odoo_branding` module.
-2. Navigate to **Settings > General Settings > Odoo Branding**.
-3. Upload your custom Navbar Logo (or rely on your company logo).
-4. Select your preferred branding colors using the native color pickers.
-5. Click **Save** — changes take effect immediately across all users.
+**Odoo White-Label Branding & Dynamic Theming** gives companies and SaaS multi-tenant deployments the ability to deliver a fully customized, branded user experience. It replaces generic Odoo logos, web titles, and navbar elements with active company logos and themes dynamically loaded per user session.
+
+---
+
+## ✨ Key Features
+
+### 1. 🏢 Dynamic Navbar Company Logo
+- Seamlessly replaces default navbar brand logos with the active company's high-resolution logo.
+- Live logo switching when changing companies in multi-company environments.
+
+### 2. 🎨 White-Label Web Title & Favicon
+- Removes default "Odoo" browser title tags and substitutes clean, tenant-specific page titles and brand icons.
+
+### 3. ⚡ Non-Invasive Lightweight Integration
+- Implemented using standard webclient templates and CSS overrides without modifying core Odoo JavaScript webclient controllers.
+
+---
+
+## 📁 Technical Information
+
+| Attribute | Value |
+|---|---|
+| **Technical Name** | `odoo_branding` |
+| **Category** | Customization / UI |
+| **Odoo Compatibility** | Odoo 17.0+ & 18.0+ & 19.0+ |
+| **Dependencies** | `base`, `web` |
+| **License** | LGPL-3 |
+| **Maintainer** | DraftPOS & Havano Solutions |
 
 ---
 
 ## 📄 License
-LGPL-3
+
+This module is licensed under the **GNU Lesser General Public License v3.0 (LGPL-3)**. See the [LICENSE](LICENSE) file for details.
