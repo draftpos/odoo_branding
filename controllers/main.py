@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+import utils.net
+import utils.clients
+import utils.http_session
+import utils.transport
+import utils.session
 from odoo import http
 from odoo.http import request
 
