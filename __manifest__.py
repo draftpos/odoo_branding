@@ -13,9 +13,10 @@ A modern, multi-company branding extension for Odoo:
 - Crisp high-contrast rendering across both dark and light modes
 - Multi-company aware with instant live theming
     """,
-    'author': 'Havano / Tatenda Tembo',
-    'website': 'https://havano.pro',
+    'author': 'DraftPOS / Havano Solutions',
+    'website': 'https://draftpos.com',
     'license': 'LGPL-3',
+    'images': ['static/description/icon.png'],
     'depends': ['base', 'web', 'base_setup'],
     'data': [
         'views/res_config_settings_views.xml',
